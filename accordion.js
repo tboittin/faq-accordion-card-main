@@ -14,5 +14,13 @@ for (i = 0; i < acc.length; i++) {
     } else {
       panel.style.display = "block";
     }
+
+    /* Rotate chevron */
+    let chevron = this.firstElementChild;
+    if (this.classList.contains("active")) {
+      chevron.style.transform = "rotate(180deg)"
+    } else {
+      chevron.style.transform = "rotate(0deg)"
+    }
   });
 }
