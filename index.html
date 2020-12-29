@@ -39,17 +39,41 @@
         justify-content: center;
       }
 
+      .top-illustration {
+        position: absolute;
+        display: block;
+        width: 100%;
+        top: 30px;
+        left: 0%;
+      }
+
+      .top-illustration img {
+        position: relative;
+        margin-left: -25px;
+        margin-top:20px;
+      }
+
+      .shadow {
+        left: 15px;
+        top: -120px;
+      }
+
       .faq {
         background-color: white;
         border-radius: 15px;
         width: 90%;
         height: fit-content;
         text-align: center;
+        padding-top: 30%;
+        padding-bottom: 15%;
+        padding-right: 5px;
+        padding-left: 5px;
+        margin-top: 150px;
       }
 
       .info-block {
         border-bottom: 1px solid hsl(240, 5%, 91%);
-        margin: 20px;
+        margin: 0 10px;
         text-align: center;
         padding: 10px 0;
       }
@@ -86,6 +110,17 @@
   </head>
   <body>
     <div class="faq">
+      <div class="mobile top-illustration">
+        <img
+          src="./images/illustration-woman-online-mobile.svg"
+          alt="woman online mobile illustration"
+        />
+        <img
+          class="shadow"
+          src="./images/bg-pattern-mobile.svg"
+          alt="woman illustration shadow mobile"
+        />
+      </div>
       <h1>FAQ</h1>
       <div class="info-block">
         <div class="accordion info-title">
