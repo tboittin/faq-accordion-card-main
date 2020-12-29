@@ -11,60 +11,133 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
+    <link
+      href="https://fonts.google.com/specimen/Kumbh+Sans"
+      rel="stylesheet"
+    />
 
     <title>Frontend Mentor | FAQ Accordion Card</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
-      .attribution {
+      /* .attribution {
         font-size: 11px;
         text-align: center;
       }
       .attribution a {
         color: hsl(228, 45%, 44%);
+      } */
+
+      body {
+        height: 100vh;
+        color: hsl(238, 29%, 16%);
+        font-family: "Kumbh Sans", sans-serif;
+        font-size: 12px;
+        font-weight: 400;
+        background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+        display: flex;
+        justify-content: center;
       }
+
+      .faq {
+        background-color: white;
+        border-radius: 15px;
+        width: 90%;
+        height: fit-content;
+        text-align: center;
+      }
+
+      .info-block {
+        border-bottom: 1px solid hsl(240, 5%, 91%);
+        margin: 20px;
+        text-align: center;
+        padding: 10px 0;
+      }
+
+      .info-title {
+        display: inline-flex;
+        align-items: baseline;
+        justify-content: space-between;
+        width: 100%;
+      }
+
+      .info-title p {
+        margin: 0;
+      }
+
+      .info-title img {
+        width: fit-content;
+        height: fit-content;
+      }
+
+      .active {
+        font-weight: 700;
+      }
+
       .pannel {
         display: none;
+        text-align: left;
+      }
+
+      p .pannel {
+        margin: 0;
       }
     </style>
   </head>
   <body>
-    <h1>FAQ</h1>
-    <div class="info-block">
-      <button class="accordion">How many team members can I invite?</button>
-      <p class="pannel">
-        You can invite up to 2 additional users on the Free plan. There is no
-        limit on team members for the Premium plan.
-      </p>
-    </div>
+    <div class="faq">
+      <h1>FAQ</h1>
+      <div class="info-block">
+        <div class="accordion info-title">
+          <p>How many team members can I invite?</p>
+          <img src="./images/icon-arrow-down.svg" alt="chevron-down" />
+        </div>
+        <p class="pannel">
+          You can invite up to 2 additional users on the Free plan. There is no
+          limit on team members for the Premium plan.
+        </p>
+      </div>
 
-    <div class="info-block">
-      <button class="accordion">What is the maximum file upload size?</button>
-      <p class="pannel">
-        No more than 2GB. All files in your account must fit your allotted
-        storage space.
-      </p>
-    </div>
-    <div class="info-block">
-      <button class="accordion">How do I reset my password?</button>
-      <p class="pannel">
-        Click “Forgot password” from the login page or “Change password” from
-        your profile page. A reset link will be emailed to you.
-      </p>
-    </div>
-    <div class="info-block">
-      <button class="accordion">Can I cancel my subscription?</button>
-      <p class="pannel">
-        Yes! Send us a message and we’ll process your request no questions
-        asked.
-      </p>
-    </div>
-    <div>
-      <button class="accordion">Do you provide additional support?</button>
-      <p class="pannel">
-        Chat and email support is available 24/7. Phone lines are open during
-        normal business hours.
-      </p>
+      <div class="info-block">
+        <div class="accordion info-title">
+          <p>What is the maximum file upload size?</p>
+          <img src="./images/icon-arrow-down.svg" alt="chevron-down" />
+        </div>
+        <p class="pannel">
+          No more than 2GB. All files in your account must fit your allotted
+          storage space.
+        </p>
+      </div>
+      <div class="info-block">
+        <div class="accordion info-title">
+          <p>How do I reset my password?</p>
+          <img src="./images/icon-arrow-down.svg" alt="chevron-down" />
+        </div>
+        <p class="pannel">
+          Click “Forgot password” from the login page or “Change password” from
+          your profile page. A reset link will be emailed to you.
+        </p>
+      </div>
+      <div class="info-block">
+        <div class="accordion info-title">
+          <p>Can I cancel my subscription?</p>
+          <img src="./images/icon-arrow-down.svg" alt="chevron-down" />
+        </div>
+        <p class="pannel">
+          Yes! Send us a message and we’ll process your request no questions
+          asked.
+        </p>
+      </div>
+      <div class="info-block">
+        <div class="accordion info-title">
+          <p>Do you provide additional support?</p>
+          <img src="./images/icon-arrow-down.svg" alt="chevron-down" />
+        </div>
+        <p class="pannel">
+          Chat and email support is available 24/7. Phone lines are open during
+          normal business hours.
+        </p>
+      </div>
     </div>
     <!-- <div class="attribution">
       Challenge by
