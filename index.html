@@ -30,6 +30,7 @@
 
       body {
         height: 100vh;
+        max-height: max-content;
         color: hsl(238, 29%, 16%);
         font-family: "Kumbh Sans", sans-serif;
         font-size: 0.8rem;
@@ -37,6 +38,7 @@
         background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
         display: flex;
         justify-content: center;
+        margin:0;
       }
 
       .mobile {
@@ -122,8 +124,6 @@
       @media (min-width: 768px) {
         body {
           font-size: 1.2em;
-          height: 100vh;
-          max-height: max-content;
         }
 
         .mobile {
