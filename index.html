@@ -39,7 +39,7 @@
         justify-content: center;
       }
 
-      .top-illustration {
+      .mobile .top-illustration {
         position: absolute;
         display: block;
         width: 100%;
@@ -48,10 +48,14 @@
         height: 0px;
       }
 
-      .top-illustration img {
+      .mobile .top-illustration img {
         position: relative;
         margin-left: -25px;
-        margin-top:20px;
+        margin-top: 20px;
+      }
+
+      .desktop {
+        display: none;
       }
 
       .shadow {
@@ -76,7 +80,7 @@
         border-bottom: 1px solid hsl(240, 5%, 91%);
         margin: 0 15px;
         text-align: center;
-        padding: 10px 0; ;
+        padding: 10px 0;
       }
 
       .info-title {
@@ -99,10 +103,82 @@
       p .pannel {
         margin: 0;
       }
+
+      @media (min-width: 1270px) {
+        body {
+          font-size: 1.2rem;
+          height: 100vh;
+          max-height: max-content;
+        }
+
+        .mobile {
+          display: none;
+        }
+
+        .desktop {
+          display: block;
+          position: absolute;
+          width: 50%;
+          top: 0;
+          left: 15.4vw;
+          height: 700px;
+          overflow: hidden;
+        }
+
+        .desktop img {
+          position: relative;
+          max-width: 70vh;
+          top: 180px;
+          left: -70px;
+        }
+
+        .desktop .shadow {
+          position: absolute;
+          top: -185px;
+          left: -550px;
+          max-width: 950px;
+        }
+
+        .faq {
+          margin: 100px 15vw;
+          min-height: 50vh;
+          height: fit-content;
+          padding: 10vh 0 ;
+          text-align: left;
+          display: flex;
+          flex-direction: row;
+          overflow: hidden;
+        }
+
+        .info {
+          display: flex;
+          flex-direction: column;
+          margin-left: 50%;
+          max-height: 70%;
+          width: 100%;
+          margin-right: 75px;
+          overflow: hidden;
+        }
+
+        .info-block {
+          margin-left: 0;
+          overflow: hidden;
+        }
+
+        .box {
+          height: 175px;
+          width: fit-content;
+          position: absolute;
+          top:315px;
+          left: 9.5vw;
+          z-index: 1;
+        }
+      }
     </style>
   </head>
   <body>
     <div class="faq">
+      <img class="desktop box" src="images/illustration-box-desktop.svg" alt="internet box" />
       <div class="mobile top-illustration">
         <img
           src="./images/illustration-woman-online-mobile.svg"
@@ -114,57 +190,70 @@
           alt="woman illustration shadow mobile"
         />
       </div>
-      <h1>FAQ</h1>
-      <div class="info-block">
-        <div class="accordion info-title">
-          How many team members can I invite?
-          <img src="./images/icon-arrow-down.svg" alt="chevron-down" />
-        </div>
-        <p class="pannel">
-          You can invite up to 2 additional users on the Free plan. There is no
-          limit on team members for the Premium plan.
-        </p>
+      <div class="desktop">
+        <img
+          src="images/illustration-woman-online-desktop.svg"
+          alt="woman online desktop illustration"
+        />
+        <img
+          class="shadow"
+          src="images/bg-pattern-desktop.svg"
+          alt="woman illustration shadow desktop"
+        />
       </div>
+      <div class="info">
+        <h1>FAQ</h1>
+        <div class="info-block">
+          <div class="accordion info-title">
+            How many team members can I invite?
+            <img src="./images/icon-arrow-down.svg" alt="chevron-down" />
+          </div>
+          <p class="pannel">
+            You can invite up to 2 additional users on the Free plan. There is
+            no limit on team members for the Premium plan.
+          </p>
+        </div>
 
-      <div class="info-block">
-        <div class="accordion info-title">
-          What is the maximum file upload size?
-          <img src="./images/icon-arrow-down.svg" alt="chevron-down" />
+        <div class="info-block">
+          <div class="accordion info-title">
+            What is the maximum file upload size?
+            <img src="./images/icon-arrow-down.svg" alt="chevron-down" />
+          </div>
+          <p class="pannel">
+            No more than 2GB. All files in your account must fit your allotted
+            storage space.
+          </p>
         </div>
-        <p class="pannel">
-          No more than 2GB. All files in your account must fit your allotted
-          storage space.
-        </p>
-      </div>
-      <div class="info-block">
-        <div class="accordion info-title">
-          How do I reset my password?
-          <img src="./images/icon-arrow-down.svg" alt="chevron-down" />
+        <div class="info-block">
+          <div class="accordion info-title">
+            How do I reset my password?
+            <img src="./images/icon-arrow-down.svg" alt="chevron-down" />
+          </div>
+          <p class="pannel">
+            Click “Forgot password” from the login page or “Change password”
+            from your profile page. A reset link will be emailed to you.
+          </p>
         </div>
-        <p class="pannel">
-          Click “Forgot password” from the login page or “Change password” from
-          your profile page. A reset link will be emailed to you.
-        </p>
-      </div>
-      <div class="info-block">
-        <div class="accordion info-title">
-          Can I cancel my subscription?
-          <img src="./images/icon-arrow-down.svg" alt="chevron-down" />
+        <div class="info-block">
+          <div class="accordion info-title">
+            Can I cancel my subscription?
+            <img src="./images/icon-arrow-down.svg" alt="chevron-down" />
+          </div>
+          <p class="pannel">
+            Yes! Send us a message and we’ll process your request no questions
+            asked.
+          </p>
         </div>
-        <p class="pannel">
-          Yes! Send us a message and we’ll process your request no questions
-          asked.
-        </p>
-      </div>
-      <div class="info-block">
-        <div class="accordion info-title">
-          Do you provide additional support?
-          <img src="./images/icon-arrow-down.svg" alt="chevron-down" />
+        <div class="info-block">
+          <div class="accordion info-title">
+            Do you provide additional support?
+            <img src="./images/icon-arrow-down.svg" alt="chevron-down" />
+          </div>
+          <p class="pannel">
+            Chat and email support is available 24/7. Phone lines are open
+            during normal business hours.
+          </p>
         </div>
-        <p class="pannel">
-          Chat and email support is available 24/7. Phone lines are open during
-          normal business hours.
-        </p>
       </div>
     </div>
     <!-- <div class="attribution">
