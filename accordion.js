@@ -19,8 +19,10 @@ for (i = 0; i < acc.length; i++) {
     let chevron = this.firstElementChild;
     if (this.classList.contains("active")) {
       chevron.style.transform = "rotate(180deg)"
+      chevron.style.transitionDuration = ".5s"
     } else {
       chevron.style.transform = "rotate(0deg)"
+      chevron.style.transitionDuration = ".5s"
     }
   });
 }
